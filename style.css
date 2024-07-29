@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#wrapper{
+    height: 100vh;
+    overflow-x: hidden;
+
+    perspective: 10px ;
+}
+
+.container{
+    height: 100% ;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    z-index: -1 ;
+
+    transform-style: preserve-3d ; /*https://developer.mozilla.org/en-US/docs/Web/CSS/transform-style*/
+}
+
+.Foreground, .Background{
+    position: absolute ;
+    height: 100% ;
+    width: 100%;
+    
+    /* z-index: -1 ; */
+    object-fit: cover;
+}
+
+.Background{
+    transform: translateZ(-40px) scale(5);
+}
+
+.Foreground{
+    transform:  translateZ(-20px) scale(3);
+}
+
+h1{
+    position: absolute;
+    top: 10rem ;    
+
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    font-size: 8em ;
+    color: white ;
+
+    text-shadow: 8px 8px 10px rgba(4, 41, 41, 0.99);
+    /* background-color: rgba(250, 235, 215, 0.38); */
+    letter-spacing: 25px;
+}
+
+section{
+    background-color: rgb(45, 45, 45);
+    color: white ;
+    padding: 5rem 0 ;
+
+}
+
+.secHead{
+    font-size: 4.5rem ;
+    padding: 0 10rem ;
+}
+
+.text{
+    font-size: 1.2rem ;
+    padding: 1rem 7rem ;
+    margin: 3rem 0 ;
+}
+
+.bg{
+    position: relative ;
+    /* top: 110px; */
+    height: 25rem ;
+
+    background-repeat: no-repeat ;
+    background-size: cover;
+
+    background-attachment: fixed; 
+
+    
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.desc{
+    background-color: rgba(45, 45, 45, 0.676);
+    padding: 10px ;
+    border-radius: 5px ;
+    font-size: 35px;
+    font-weight:900;
+}
+
+.bg1{
+    background-image: url(./BIKING.jpg) ;
+    color: rgb(255, 255, 255);
+
+}
+
+.bg2{
+    background-image: url(./Skiing.jpg) ;
+
+}
+
+.bg3{
+    background-image: url(./Surfing.jpeg) ;
+
+}
